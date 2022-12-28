@@ -1,8 +1,10 @@
-:root{
-    --brown: #433735;
-    --brown-dark: #362820;
-    --red: #CE5858;
-    --green: #A8D4AD;
-    --blue: #A8CAD4;
-    --grey: #7D7D7D;
+:root {
+  --brown: #433735;
+  --brown-dark: #362820;
+  --red: #ce5858;
+  --green: #a8d4ad;
+  --blue: #a8cad4;
+  --grey: #7d7d7d;
+  --white: #ffffff;
+  --paper: #f0daca;
 }
