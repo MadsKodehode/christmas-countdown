@@ -1,11 +1,163 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-.main{
+.main {
   background: var(--brown);
   max-height: 100vh;
   min-height: 100vh;
+  min-width: 100%;
+  overflow: auto;
 }
+/* SideMenu */
+.menu {
+  background: var(--paper);
+  float: left;
+  height: 100vh;
+  min-width: 30%;
+  max-width: 33.333%;
+  position: absolute;
+  z-index: 10;
+}
+
+.menu-head {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.menu-title {
+  text-align: center;
+  font-size: 40px;
+  padding: 10px;
+  font-family: "Anton";
+  color: var(--red);
+}
+
+.arrow-close {
+  color: var(--brown-dark);
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.arrow-open {
+  color: var(--paper);
+  font-size: 40px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 20;
+}
+
+.empty-text {
+  color: var(--brown-dark);
+  font-family: "Imbue";
+  text-align: center;
+  font-size: 55px;
+  margin-top: 250px;
+}
+.greetings {
+  width: 90%;
+  margin: auto;
+  list-style: none;
+  font-family: "Imbue";
+}
+
+.greeting {
+  font-size: 24px;
+  color: var(--brown-dark);
+  border-bottom: 1px solid var(--brown-dark);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time-stamp {
+  color: var(--grey);
+  font-size: 16px;
+  padding: 0 10px;
+}
+
+.time-stamp-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* SideMenu End */
+
+/* Counter Styles */
+.wrapper {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.top-wrap {
+  width: 500px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.bot-wrap {
+  width: 500px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.top-title {
+  font-size: 64px;
+  font-family: "Cinzel Decorative";
+  color: var(--blue);
+
+  font-weight: bold;
+}
+
+.bot-title {
+  font-size: 64px;
+  font-family: "Cinzel Decorative";
+  color: var(--green);
+  font-weight: bold;
+}
+
+.counter {
+  color: var(--red);
+  font-family: "Anton";
+  font-size: 100px;
+}
+
+/* Counter Styles End */
+
+/* Input Styles */
+
+.greet {
+  margin-top: 100px;
+  outline: none;
+  border: none;
+  font-size: 24px;
+  background: var(--paper);
+  font-family: "Imbue";
+  width: 400px;
+  padding: 20px;
+  color: var(--brown-dark);
+}
+
+::placeholder {
+  color: var(--brown-dark);
+}
+
+.send {
+  font-size: 25px;
+  color: var(--brown-dark);
+  margin-left: -40px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+/* Input Styles End */
