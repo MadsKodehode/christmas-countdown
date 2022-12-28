@@ -3,10 +3,16 @@ import "./styles/colorPalette.css";
 import SideMenu from "./components/SideMenu";
 import { RiSendPlaneFill } from "react-icons/ri";
 import { useState, createContext } from "react";
+import { useEffect } from "react";
+import Countdown from "./hooks/utils";
+//Context for list state
 export const ListContext = createContext();
 function App() {
+  const { days, hours, minutes, seconds } = Countdown();
+
   //Input State
   const [input, setInput] = useState("");
+
   //List State
   const [list, setList] = useState([]);
 
@@ -28,6 +34,13 @@ function App() {
     setInput("");
   }
 
+  //Keydown handler function
+  function keyHandle(e) {
+    if (e.key === "Enter") {
+      addGreeting(greeting);
+    }
+  }
+
   return (
     <div className="App">
       <main className="main">
@@ -42,7 +55,10 @@ function App() {
           <div className="bot-wrap">
             <h2 className="bot-title">ChistMas</h2>
           </div>
-          <h1 className="counter">64d 03h 30s</h1>
+          <h1 className="counter">
+            {days}d {hours}h {minutes}m {seconds}s
+          </h1>
+
           <span className="input-wrapper">
             <input
               type="text"
@@ -50,6 +66,8 @@ function App() {
               placeholder="Write a greeting"
               value={input}
               onChange={(e) => setInput(e.target.value)}
+              onKeyDown={keyHandle}
+              autoFocus
             ></input>
 
             <RiSendPlaneFill

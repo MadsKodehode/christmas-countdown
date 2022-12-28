@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { ListContext } from "../App";
+
 function List() {
   const list = useContext(ListContext);
-  console.log(list);
 
   //Funtion for displaying the timestamp in readable format\\
   function getReadableTime(greeting) {
