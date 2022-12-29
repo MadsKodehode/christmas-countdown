@@ -10,16 +10,21 @@
   min-height: 100vh;
   min-width: 100%;
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 /* SideMenu */
 .menu {
   background: var(--paper);
   float: left;
   height: 100vh;
-  min-width: 30%;
-  max-width: 33.333%;
+  min-width: 33.333%;
+  max-width: 35%;
   position: absolute;
   z-index: 10;
+  left: 0;
 }
 
 .menu-head {
@@ -29,6 +34,7 @@
   justify-content: space-between;
   margin: 0 auto;
 }
+
 .menu-title {
   text-align: center;
   font-size: 40px;
@@ -49,6 +55,8 @@
   cursor: pointer;
   position: absolute;
   z-index: 20;
+  left: 0;
+  top: 0;
 }
 
 .empty-text {
@@ -57,6 +65,7 @@
   text-align: center;
   font-size: 55px;
   margin-top: 250px;
+  padding: 0px 10px;
 }
 .greetings {
   width: 90%;
@@ -90,15 +99,6 @@
 /* SideMenu End */
 
 /* Counter Styles */
-.wrapper {
-  width: auto;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 80px;
-}
 
 .top-wrap {
   width: 500px;
