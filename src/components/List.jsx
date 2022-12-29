@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { ListContext } from "../App";
 
 function List() {
-  const list = useContext(ListContext);
+  const [list, setList] = useContext(ListContext);
 
   //Funtion for displaying the timestamp in readable format\\
   function getReadableTime(greeting) {
@@ -10,11 +10,13 @@ function List() {
 
     return `${newTime.toLocaleTimeString()}`;
   }
+
   function getReadableDate(greeting) {
     const newDate = new Date(greeting);
 
     return `${newDate.toLocaleDateString()}`;
   }
+
   return !list.length ? (
     <h1 className="empty-text">No greetings yet</h1>
   ) : (
