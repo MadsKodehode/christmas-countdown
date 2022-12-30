@@ -23,11 +23,11 @@ function List() {
     <ul className="greetings">
       {list.map((greeting) => (
         <li className="greeting" key={greeting.id}>
+          {greeting.text}
           <div className="time-stamp-wrap">
             <span className="time-stamp">{getReadableTime(greeting.id)}</span>
             <span className="time-stamp">{getReadableDate(greeting.id)}</span>
           </div>
-          {greeting.text}
         </li>
       ))}
     </ul>

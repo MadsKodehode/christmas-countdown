@@ -4,12 +4,17 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow: hidden;
+}
+
 .main {
   background: var(--brown);
   max-height: 100vh;
   min-height: 100vh;
   min-width: 100%;
   overflow: auto;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,6 +30,7 @@
   position: absolute;
   z-index: 10;
   left: 0;
+  font-family: "Pinyon Script", cursive;
 }
 
 .menu-head {
@@ -39,7 +45,7 @@
   text-align: center;
   font-size: 40px;
   padding: 10px;
-  font-family: "Anton";
+
   color: var(--red);
 }
 
@@ -71,23 +77,24 @@
   width: 90%;
   margin: auto;
   list-style: none;
-  font-family: "Imbue";
 }
 
 .greeting {
-  font-size: 24px;
+  font-size: 20px;
   color: var(--brown-dark);
   border-bottom: 1px solid var(--brown-dark);
-  padding: 10px;
+  padding: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: "Pacifico", cursive;
 }
 
 .time-stamp {
   color: var(--grey);
   font-size: 16px;
   padding: 0 10px;
+  font-family: "Imbue";
 }
 
 .time-stamp-wrap {
@@ -160,4 +167,214 @@
   vertical-align: middle;
   cursor: pointer;
 }
+
+.input-wrapper {
+  position: relative;
+}
 /* Input Styles End */
+
+/* Christmas Message Styles */
+
+.christmas-msg {
+  color: var(--red);
+  font-size: 100px;
+  font-family: "Mountains of Christmas", cursive;
+  animation: scaleAnim 2s ease-in, colorAnim 3s ease-in-out infinite;
+}
+
+.filthy {
+  font-size: 20px;
+  font-family: "Mountains of Christmas", cursive;
+  color: var(--brown-dark);
+  text-shadow: 0px 0px 2px;
+  opacity: 0;
+  animation: fadeIn 2s ease-in 3s normal forwards 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    color: var(--paper);
+  }
+}
+
+@keyframes colorAnim {
+  0% {
+    color: var(--red);
+  }
+  30% {
+    color: var(--green);
+  }
+  50% {
+    color: var(--blue);
+  }
+  100% {
+    color: var(--red);
+  }
+}
+
+@keyframes scaleAnim {
+  0% {
+    opacity: 0;
+    transform: scale(20);
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.snow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  z-index: 0;
+}
+.snowflake {
+  position: absolute;
+  top: -100px;
+  animation: snowFall 35s linear infinite;
+}
+.snow .snowflake:nth-child(1) {
+  width: 20px;
+  left: 5%;
+  animation-delay: 0s;
+}
+.snow .snowflake:nth-child(2) {
+  width: 25px;
+  right: 30%;
+  animation-delay: 3s;
+  animation-duration: 20s;
+}
+.snow .snowflake:nth-child(3) {
+  width: 30px;
+  right: 20%;
+  animation-delay: 6s;
+  animation-duration: 25s;
+}
+.snow .snowflake:nth-child(4) {
+  width: 35px;
+  right: 10%;
+  animation-delay: 20s;
+  animation-duration: 10s;
+}
+.snow .snowflake:nth-child(5) {
+  width: 40px;
+  left: 10%;
+  animation-delay: 20s;
+  animation-duration: 10s;
+}
+.snow .snowflake:nth-child(6) {
+  width: 60px;
+  left: 20%;
+  animation-delay: 20s;
+  animation-duration: 10s;
+}
+.snow .snowflake:nth-child(7) {
+  width: 90px;
+  left: 30%;
+  animation-delay: 11s;
+  animation-duration: 10s;
+}
+.snow .snowflake:nth-child(8) {
+  width: 20px;
+  right: 15%;
+  animation-delay: 6s;
+  animation-duration: 12s;
+}
+.snow .snowflake:nth-child(9) {
+  width: 30px;
+  left: 25%;
+  animation-delay: 19s;
+  animation-duration: 10s;
+}
+.snow .snowflake:nth-child(10) {
+  width: 40px;
+  left: 40%;
+  animation-delay: 8s;
+  animation-duration: 15s;
+}
+.snow .snowflake:nth-child(11) {
+  width: 50px;
+  right: 20%;
+  animation-delay: 9s;
+  animation-duration: 13s;
+}
+.snow .snowflake:nth-child(12) {
+  width: 60px;
+  right: 30%;
+  animation-delay: 17s;
+  animation-duration: 20s;
+}
+.snow .snowflake:nth-child(13) {
+  width: 90px;
+  right: 40%;
+  animation-delay: 22s;
+  animation-duration: 30s;
+}
+.snow .snowflake:nth-child(14) {
+  width: 25px;
+  right: 10%;
+  animation-delay: 20s;
+  animation-duration: 10s;
+}
+.snow .snowflake:nth-child(15) {
+  width: 20px;
+  right: 14%;
+  animation-delay: 2s;
+  animation-duration: 10s;
+}
+.snow .snowflake:nth-child(16) {
+  width: 35px;
+  left: 60%;
+  animation-delay: 3s;
+  animation-duration: 12s;
+}
+.snow .snowflake:nth-child(17) {
+  width: 45px;
+  left: 38%;
+  animation-delay: 20s;
+  animation-duration: 14s;
+}
+.snow .snowflake:nth-child(18) {
+  width: 55px;
+  left: 2%;
+  animation-delay: 20s;
+  animation-duration: 10s;
+}
+.snow .snowflake:nth-child(19) {
+  width: 20px;
+  right: 5%;
+  animation-delay: 5s;
+  animation-duration: 10s;
+}
+.snow .snowflake:nth-child(20) {
+  width: 40px;
+  left: 25%;
+  animation-delay: 10s;
+  animation-duration: 20s;
+}
+
+@keyframes snowFall {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(1000px) rotate(720deg);
+  }
+}
+/* Christmas Message Styles End */
