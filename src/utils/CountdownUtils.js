@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, createContext } from "react";
 
 //Function for displaying countdown
 function CountdownTimer() {
@@ -6,15 +6,31 @@ function CountdownTimer() {
   const today = new Date();
 
   //Making a target date variable that stores time of christmas
-  const christmas = new Date(today.getFullYear(), 11, 25);
+  const christmas = new Date(today.getFullYear(), 11, 30);
 
   //State for storing remaining time
   const [remainingTime, setRemainingTime] = useState(null);
 
+  //State for if its christmas
+  const [isChristmas, setIsChristmas] = useState(false);
+
   useEffect(() => {
     const timer = setInterval(() => {
-      //If its past christmas it will set it to next years christmas
-      if (today.getDate() > christmas.getDate()) {
+      //If todays date and month is indeed christmas
+      //then stop timer and set isChristmas to true
+      if (
+        today.getDate() === christmas.getDate() &&
+        today.getMonth() === christmas.getMonth()
+      ) {
+        setIsChristmas(true);
+
+        return () => clearInterval(timer);
+      } else {
+        setIsChristmas(false);
+      }
+
+      //If its after christmas it will set the date to next
+      if (today > christmas) {
         christmas.setFullYear(christmas.getFullYear() + 1);
       }
 
@@ -24,7 +40,7 @@ function CountdownTimer() {
 
     //Cleaning up the interval
     return () => clearInterval(timer);
-  }, [christmas]); //Re run effect if this changes
+  }, [christmas, isChristmas]); //Re run effect if this changes
 
   //Using the function to convert to readable time
   // and returning it to be displayed in our app
