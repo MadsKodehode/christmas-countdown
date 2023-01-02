@@ -1,6 +1,8 @@
 import { IoMdArrowDropright, IoMdArrowDropleft } from "react-icons/io";
 import { useState } from "react";
 import List from "./List";
+
+//Sidemenu Component with toggle
 function SideMenu() {
   const [isActive, setIsActive] = useState(false);
 

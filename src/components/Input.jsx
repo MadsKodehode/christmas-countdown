@@ -1,9 +1,10 @@
-import { RiSendPlaneFill } from "react-icons/ri";
 import { useContext, useState } from "react";
 import { ListContext } from "../App";
+
+//Input component for writing greetings
 function Input() {
   const [list, setList] = useContext(ListContext);
-
+  console.log(list);
   //Input State
   const [input, setInput] = useState("");
 
@@ -31,7 +32,7 @@ function Input() {
       addGreeting(greeting);
     }
   }
-  return (
+  return input ? (
     <span className="input-wrapper">
       <input
         type="text"
@@ -42,11 +43,19 @@ function Input() {
         onKeyDown={keyHandle}
         autoFocus
       ></input>
-
-      <RiSendPlaneFill
-        className="send"
-        onClick={() => addGreeting(greeting)}
-      ></RiSendPlaneFill>
+      <p className="enter">Enter to send</p>
+    </span>
+  ) : (
+    <span className="input-wrapper">
+      <input
+        type="text"
+        className="greet"
+        placeholder="Write a greeting"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        onKeyDown={keyHandle}
+        autoFocus
+      ></input>
     </span>
   );
 }

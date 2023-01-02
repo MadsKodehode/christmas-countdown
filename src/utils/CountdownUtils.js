@@ -1,23 +1,25 @@
-import { useState, useEffect, createContext } from "react";
+import { useState, useEffect } from "react";
 
-//Function for displaying countdown
-function CountdownTimer() {
-  //Making a date variable with current date
+//Function that makes a countdown to christmas and also
+//returns remaining time converted using the convertToReadable function
+function RemainingTime() {
+  //Todays date
   const today = new Date();
 
-  //Making a target date variable that stores time of christmas
-  const christmas = new Date(today.getFullYear(), 11, 30);
+  //Date of christmas
+  const christmas = new Date(today.getFullYear(), 11, 25);
 
-  //State for storing remaining time
+  //Remaining time state
   const [remainingTime, setRemainingTime] = useState(null);
 
-  //State for if its christmas
+  //Christmas state
   const [isChristmas, setIsChristmas] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
       //If todays date and month is indeed christmas
-      //then stop timer and set isChristmas to true
+      //then set isChristmas to true and stop timer
+
       if (
         today.getDate() === christmas.getDate() &&
         today.getMonth() === christmas.getMonth()
@@ -25,12 +27,10 @@ function CountdownTimer() {
         setIsChristmas(true);
 
         return () => clearInterval(timer);
-      } else {
-        setIsChristmas(false);
-      }
 
-      //If its after christmas it will set the date to next
-      if (today > christmas) {
+        //If its after christmas it will set the date to next christmas
+      } else if (today > christmas) {
+        setIsChristmas(false);
         christmas.setFullYear(christmas.getFullYear() + 1);
       }
 
@@ -38,7 +38,7 @@ function CountdownTimer() {
       setRemainingTime(christmas - today);
     }, 1000);
 
-    //Cleaning up the interval
+    //Cleaning up the interval so it doesnt stack
     return () => clearInterval(timer);
   }, [christmas, isChristmas]); //Re run effect if this changes
 
@@ -67,4 +67,4 @@ function convertToReadable(remaining) {
   };
 }
 
-export default CountdownTimer;
+export default RemainingTime;

@@ -159,15 +159,10 @@ body {
 ::placeholder {
   color: var(--brown-dark);
 }
-
-.send {
-  font-size: 25px;
-  color: var(--brown-dark);
-  margin-left: -40px;
-  vertical-align: middle;
-  cursor: pointer;
+.enter {
+  font-family: "Imbue";
+  color: var(--grey);
 }
-
 .input-wrapper {
   position: relative;
 }
