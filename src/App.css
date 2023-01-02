@@ -140,6 +140,11 @@ body {
   font-size: 100px;
 }
 
+.loading {
+  color: var(--grey);
+  font-family: "Cinzel Decorative";
+}
+
 /* Counter Styles End */
 
 /* Input Styles */
