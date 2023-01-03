@@ -8,26 +8,26 @@ function ExpiredCountdown() {
       <h1 className="christmas-msg">Its Christmas!</h1>
       <p className="filthy">You filthy animal</p>
       <div className="snow">
-        <img className="snowflake" src={Snowflake1}></img>
-        <img className="snowflake" src={Snowflake2}></img>
-        <img className="snowflake" src={Snowflake1}></img>
-        <img className="snowflake" src={Snowflake2}></img>
-        <img className="snowflake" src={Snowflake1}></img>
-        <img className="snowflake" src={Snowflake2}></img>
-        <img className="snowflake" src={Snowflake1}></img>
-        <img className="snowflake" src={Snowflake2}></img>
-        <img className="snowflake" src={Snowflake1}></img>
-        <img className="snowflake" src={Snowflake2}></img>
-        <img className="snowflake" src={Snowflake1}></img>
-        <img className="snowflake" src={Snowflake2}></img>
-        <img className="snowflake" src={Snowflake1}></img>
-        <img className="snowflake" src={Snowflake2}></img>
-        <img className="snowflake" src={Snowflake1}></img>
-        <img className="snowflake" src={Snowflake2}></img>
-        <img className="snowflake" src={Snowflake1}></img>
-        <img className="snowflake" src={Snowflake2}></img>
-        <img className="snowflake" src={Snowflake1}></img>
-        <img className="snowflake" src={Snowflake2}></img>
+        <img className="snowflake" alt="snowflake" src={Snowflake1}></img>
+        <img className="snowflake" alt="snowflake" src={Snowflake2}></img>
+        <img className="snowflake" alt="snowflake" src={Snowflake1}></img>
+        <img className="snowflake" alt="snowflake" src={Snowflake2}></img>
+        <img className="snowflake" alt="snowflake" src={Snowflake1}></img>
+        <img className="snowflake" alt="snowflake" src={Snowflake2}></img>
+        <img className="snowflake" alt="snowflake" src={Snowflake1}></img>
+        <img className="snowflake" alt="snowflake" src={Snowflake2}></img>
+        <img className="snowflake" alt="snowflake" src={Snowflake1}></img>
+        <img className="snowflake" alt="snowflake" src={Snowflake2}></img>
+        <img className="snowflake" alt="snowflake" src={Snowflake1}></img>
+        <img className="snowflake" alt="snowflake" src={Snowflake2}></img>
+        <img className="snowflake" alt="snowflake" src={Snowflake1}></img>
+        <img className="snowflake" alt="snowflake" src={Snowflake2}></img>
+        <img className="snowflake" alt="snowflake" src={Snowflake1}></img>
+        <img className="snowflake" alt="snowflake" src={Snowflake2}></img>
+        <img className="snowflake" alt="snowflake" src={Snowflake1}></img>
+        <img className="snowflake" alt="snowflake" src={Snowflake2}></img>
+        <img className="snowflake" alt="snowflake" src={Snowflake1}></img>
+        <img className="snowflake" alt="snowflake" src={Snowflake2}></img>
       </div>
     </>
   );

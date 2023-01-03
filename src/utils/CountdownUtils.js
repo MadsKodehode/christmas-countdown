@@ -7,7 +7,7 @@ function RemainingTime() {
   const today = new Date();
 
   //Date of christmas
-  const christmas = new Date(today.getFullYear(), 11, 25);
+  const christmas = new Date(today.getFullYear(), 12, 3);
 
   //Remaining time state
   const [remainingTime, setRemainingTime] = useState(null);
